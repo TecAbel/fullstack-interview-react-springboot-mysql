@@ -1,7 +1,6 @@
 package com.tecabel.tecabel_interview.services;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -23,10 +22,9 @@ public class PersonService {
   }
 
   public Person findById(Integer id) {
-    var person = this.personRepository.findById(id);
-    if (person.get() == null)
-      throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado");
-    return person.get();
+    var person = this.personRepository.findById(id).orElseThrow(
+        () -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+    return person;
   }
 
   public Person save(PersonRequestDto requestDto) {

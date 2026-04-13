@@ -4,8 +4,6 @@ package com.tecabel.tecabel_interview.controllers;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +34,7 @@ public class PersonController {
     response.setData(this.personService.retrieve());
     response.setStatus(true);
     response.setMsg("Usuarios obtenidos correctamente");
-    return new BaseResponseDto<List<Person>>();
+    return response;
   }
 
   @GetMapping("/{id}")
@@ -52,7 +50,7 @@ public class PersonController {
   public BaseResponseDto<Person> create(@Valid @RequestBody PersonRequestDto dto) {
     var response = new BaseResponseDto<Person>();
     response.setStatus(true);
-    response.setMsg("Usuario encontrado");
+    response.setMsg("Usuario registrado correctamente");
     response.setData(this.personService.save(dto));
     return response;
   }
