@@ -1,0 +1,7 @@
+com/tecabel/tecabel_interview/dtos/core/BaseResponseDto.class
+com/tecabel/tecabel_interview/services/PersonService.class
+com/tecabel/tecabel_interview/TecabelInterviewApplication.class
+com/tecabel/tecabel_interview/repositories/PersonRepository.class
+com/tecabel/tecabel_interview/dtos/person/PersonRequestDto.class
+com/tecabel/tecabel_interview/entities/Person.class
+com/tecabel/tecabel_interview/controllers/PersonController.class

@@ -1,0 +1,7 @@
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/TecabelInterviewApplication.java
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/controllers/PersonController.java
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/dtos/core/BaseResponseDto.java
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/dtos/person/PersonRequestDto.java
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/entities/Person.java
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/repositories/PersonRepository.java
+/Users/tecabel/Documents/react-java-interview/api/src/main/java/com/tecabel/tecabel_interview/services/PersonService.java
