@@ -52,6 +52,7 @@ public class PersonService {
   }
 
   public void deleteById(Integer id) {
-    this.personRepository.deleteById(id);
+    var person = this.findById(id);
+    this.personRepository.deleteById(person.getId());
   }
 }
