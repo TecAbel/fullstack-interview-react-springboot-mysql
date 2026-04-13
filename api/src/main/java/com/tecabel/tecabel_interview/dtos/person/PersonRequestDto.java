@@ -5,6 +5,7 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
@@ -23,6 +24,8 @@ public class PersonRequestDto {
   @Past(message = "La fecha de nacimiento debe ser una fecha pasada")
   private LocalDate birthday;
 
+  @NotNull(message = "El puesto es obligatorio")
+  @NotBlank(message = "El puesto es obligatorio")
   @Size(max = 100, message = "El puesto no puede exceder los 100 caracteres")
   private String jobPosition;
 

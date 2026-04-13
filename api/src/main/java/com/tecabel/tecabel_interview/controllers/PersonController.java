@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,7 +24,7 @@ import jakarta.validation.constraints.Null;
 
 @RestController
 @RequestMapping("api/v1/persons")
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "http://localhost:5173")
 public class PersonController {
   @Autowired
   private PersonService personService;
@@ -52,6 +53,15 @@ public class PersonController {
     response.setStatus(true);
     response.setMsg("Usuario registrado correctamente");
     response.setData(this.personService.save(dto));
+    return response;
+  }
+
+  @PutMapping("/{id}")
+  public BaseResponseDto<Person> update(@PathVariable Integer id, @Valid @RequestBody PersonRequestDto dto) {
+    var response = new BaseResponseDto<Person>();
+    response.setStatus(true);
+    response.setMsg("Usuario registrado correctamente");
+    response.setData(this.personService.update(id, dto));
     return response;
   }
 
